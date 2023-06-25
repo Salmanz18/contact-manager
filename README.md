@@ -8,9 +8,6 @@
 - React Router v6
 - Charts & Maps
 
-## Tools
-- Vite + React + TypeScript + Airbnb + Husky = 🔥
-
 ## Features
 
 - 🦾 Up to date libraries version and their features
