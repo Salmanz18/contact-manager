@@ -1,5 +1,5 @@
 {
-  "name": "vite-react-ts-minimal-template",
+  "name": "contact-manager",
   "private": true,
   "version": "0.0.0",
   "scripts": {
@@ -13,8 +13,12 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.45.0",
+    "react-redux": "^8.1.1",
+    "styled-components": "^6.0.0-rc.6"
   },
   "devDependencies": {
     "@types/react": "^18.0.17",
