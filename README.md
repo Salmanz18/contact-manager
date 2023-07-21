@@ -1,19 +1,14 @@
 # Contact Manager
 
 ## Tech Stack
+
 - React
 - Typescript
-- React Query
+- Redux Toolkit
+- RTK Query
 - Styled Components
+- Tailwind CSS
 - React Router v6
-- Charts & Maps
-
-## Features
-
-- 🦾 Up to date libraries version and their features
-- 🔎 Pre-configured and extensible ESLint configuration without wrong and unused rules designed for old React versions
-- 💅 Pre-configured and extensible Prettier configuration
-- 🔬 Git hooks for code formatting and linting pre-commit
 
 ## Usage
 
@@ -64,14 +59,3 @@ Serve production build locally
 ```bash
   yarn preview
 ```
-
-## Resources
-
-- [Vite](https://github.com/vitejs/vite)
-- [Airbnb JS Style Guide](https://github.com/airbnb/javascript)
-- [Airbnb React Style Guide](https://github.com/airbnb/javascript/tree/master/react)
-- [Husky](https://github.com/typicode/husky)
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
