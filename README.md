@@ -9,6 +9,7 @@
 - Styled Components
 - Tailwind CSS
 - React Router v6
+- React Hook Form
 
 ## Usage
 
