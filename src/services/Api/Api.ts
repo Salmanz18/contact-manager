@@ -9,7 +9,13 @@ export const contactsApi = createApi({
     contacts: builder.query<Contact[], void>({
       query: () => '/contacts',
     }),
+    getContactDetailsById: builder.mutation<Contact, string>({
+      query: (id) => ({
+        url: `contacts/${id}`,
+        method: 'GET',
+      }),
+    }),
   }),
 });
 
-export const { useContactsQuery } = contactsApi;
+export const { useContactsQuery, useGetContactDetailsByIdMutation } = contactsApi;

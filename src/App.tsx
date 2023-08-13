@@ -1,25 +1,41 @@
-import { useContactsQuery } from './services/Api/Api';
+import { useContactsQuery, useGetContactDetailsByIdMutation } from './services/Api/Api';
 
-function App() {
-  const { data, error, isLoading, isFetching, isSuccess } = useContactsQuery();
+const App = () => {
+  const { data, error, isLoading, isSuccess } = useContactsQuery();
+  const [getContactDetails, getContactDetailsStatus] = useGetContactDetailsByIdMutation();
+
+  const onViewDetailsClick = (id: string) => {
+    getContactDetails(id);
+  };
 
   return (
-    <div className="flex flex-column justify-center">
-      <h1>Contact Manager - 🎮</h1>
-      <p>Contact List</p>
+    <div className="flex flex-col items-center">
+      <div className="font-extrabold">Contact Manager 🎮</div>
+      <div className="mt-5 font-semibold">Contact List</div>
       {isLoading && <h2>...Loading</h2>}
-      {isFetching && <h2>...Loading</h2>}
       {error && <h2>Something went wrong!</h2>}
       {isSuccess && (
-        <div>
-          console.log(data)
+        <div className="mt-2">
           {data?.map((contact) => {
-            return <p key={contact.id}>{contact.name}</p>;
+            return (
+              <div className="flex" key={contact.id}>
+                <p>{contact.name}</p>
+                <button
+                  id={contact.id}
+                  className="border border-gray-400 rounded shadow ml-2"
+                  onClick={() => onViewDetailsClick(contact.id)}
+                >
+                  view detaills
+                </button>
+              </div>
+            );
           })}
         </div>
       )}
+      <div className="mt-5 font-semibold">Contact Details</div>
+      <div>{getContactDetailsStatus.data?.name}</div>
     </div>
   );
-}
+};
 
 export default App;
